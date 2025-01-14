@@ -41,6 +41,60 @@
       color: #999;
       font-size: 0.9em;
     }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Caption text */
+    .caption {
+      color: #fff;
+      font-size: 18px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Navigation buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      padding: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      user-select: none;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
   </style>
 </head>
 <body>
@@ -52,6 +106,7 @@
 
   <section>
     <h2>まとめる目的</h2>
+    <p>7月からのこの部署での成果物・評価を自分でまとまて提出するため</p>
     <p>チームに参加して以来、私はデータエンジニア・ジュニアデータサイエンティストとしてさまざまなタスクや取り組みを通じて、チームの目標達成を補助してきました。</p>
     <p>この報告書では、私がこれまでに達成した業務と付加した価値について要約しています。</p>
   </section>
@@ -62,8 +117,24 @@
       <li><strong>CKレコメンデーション:</strong> Successfully implemented [specific task or achievement].</li>
       <li><strong>Ckシフト:</strong> Successfully implemented [specific task or achievement].</li>
       <li><strong>各種RPA:</strong> Improved [process or workflow] by [specific action].</li>
-      <li><strong>テンプレート開発:</strong> Worked closely with [team or department] on [specific project].</li>
-      <li><strong>情報収集＆スクレイピング:</strong> Enhanced skills in [technology or methodology].</li>
+      <li>
+        <strong>テンプレート開発:</strong> Worked closely with [team or department] on [specific project].
+        <ul>
+          <li>Developed templates for [specific purpose or team].</li>
+          <li>Ensured compatibility with [specific tools or systems].</li>
+          <li>Reduced processing time by [specific metric or percentage].</li>
+          <li>Collaborated with [colleague/team] to address [specific challenge].</li>
+        </ul>
+      </li>
+      <li>
+        <strong>情報収集＆スクレイピング:</strong> Worked closely with [team or department] on [specific project].
+        <ul>
+          <li>Developed templates for [specific purpose or team].</li>
+          <li>Ensured compatibility with [specific tools or systems].</li>
+          <li>Reduced processing time by [specific metric or percentage].</li>
+          <li>Collaborated with [colleague/team] to address [specific challenge].</li>
+        </ul>
+      </li>
       <li><strong>勉強会・スキル補助資料作成:</strong> Enhanced skills in [technology or methodology].</li>
       <li><strong>LLMモデル導入:</strong> Enhanced skills in [technology or methodology].</li>
       <li><strong>法人リスト作成:</strong> Enhanced skills in [technology or methodology].</li>
@@ -73,26 +144,28 @@
 
   <section>
     <h2>反省点</h2>
-    <p>During my time here, I have faced and resolved the following challenges:</p>
+    <p>私は以下のような課題があると強く考えます。</p>
     <ul>
-      <li>Resolved [specific problem] by [solution].</li>
-      <li>Adapted to [challenge] by [action].</li>
+      <li>勤怠：Resolved [specific problem] by [solution].</li>
+      <li>要件定義不足：Adapted to [challenge] by [action].</li>
+      <li>システム安定性不足：.</li>
     </ul>
   </section>
 
   <section>
     <h2>今後６か月計画</h2>
-    <p>Moving forward, I aim to:</p>
+    <p>早く以下の課題を解決したいと考えます</p>
     <ul>
-        <li><strong>CKシフト自動化:</strong> Successfully implemented [specific task or achievement].</li>
-        <li><strong>インフラ基盤:</strong> Successfully implemented [specific task or achievement].</li>
-        <li><strong>広告最適化:</strong> Successfully implemented [specific task or achievement].</li>
+        <li><strong>CKシフト自動化:</strong> 広告データをベースに日次・週次・月次CK配置・最適化プランを作成する</li>
+        <li><strong>インフラ基盤:</strong> AWSを中心としたインフラ作成</li>
+        <li><strong>広告最適化:</strong> CKシフトと連動した広告最適状況作成</li>
     </ul>
   </section>
 
   <section>
     <h2>６か月～２年長期計画</h2>
-    <p>Moving forward, I aim to:</p>
+    <p>会社の悩みとして、効率的な集客・超高単価客の海外流出・CK効率低下・IT＆AIツール不足だと定義した</p>
+    <p>私は２年スパンで以下の課題に取り組みたいと考えます。</p>
     <ul>
         <li><strong>CK関連マルチモーダル:</strong> Successfully implemented [specific task or achievement].</li>
         <li><strong>広告ABテストツール開発:</strong> Successfully implemented [specific task or achievement].</li>
