@@ -54,9 +54,14 @@
       overflow: hidden;
     }
 
-    .slides {
-      display: none;
-      width: 100%;
+    .slide {
+      flex: 0 0 auto; /* Prevents slides from shrinking and ensures they don't wrap */
+      margin-right: 20px; /* Add space between slides */
+    }
+
+    .slide-image {
+      max-width: 100%;
+      height: auto;
     }
 
     .slideshow-container img {
