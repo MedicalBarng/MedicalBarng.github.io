@@ -48,24 +48,27 @@
     }
 
     .slideshow-container {
+      position: relative;
+      overflow: hidden;
+      width: 50%;
       display: flex;
-      overflow-x: auto;
-      padding: 10px 0;
+      align-items: center; /* Vertically centers the content */
+      justify-content: center; /* Centers everything horizontally */
+    }
+
+    .slides {
+      display: none;
+      transition: transform 0.5s ease;
     }
 
     .slide {
-      flex: 0 0 auto; /* Prevents slides from shrinking and ensures they don't wrap */
-      margin-right: 20px; /* Add space between slides */
+      display: none;
+      margin-right: 20px;
     }
 
     .slide-image {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .slideshow-container img {
-      width: 100%;
-      height: auto;
+      width: 50%; /* Ensure image spans the entire container */
+      display: block;
     }
 
     /* Caption text */
@@ -82,20 +85,14 @@
 
     /* Navigation buttons */
     .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: auto;
-      padding: 8px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      border: none;
       background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-      user-select: none;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 100;
     }
+
 
     .prev {
       left: 10px;
@@ -103,6 +100,16 @@
 
     .next {
       right: 10px;
+    }
+
+    /* Style for the toggle button */
+    .toggle-button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -136,17 +143,23 @@
       <li>
         <strong>テンプレート開発:</strong> pythonベースデータ自動算出スクリプトを作成した
         <div class="slideshow-container">
-          <div class="slide">
-            <li>GIT repository基本</li>
-            <p>プロダクトやコード共有の基本テンプレートを作成した</p>
-            <img src="./images/git_template.png" alt="Overview Image" class="slide-image" width="40%">
+          <div class="slides">
+            <div class="slide">
+              <img src="./images/button_click.png" alt="Overview Image" class="slide-image" width="40%">
+            </div>
+            <div class="slide">
+              <li>GIT repository基本:プロダクトやコード共有の基本テンプレートを作成した</li>
+              <img src="./images/git_template.png" alt="Overview Image" class="slide-image" width="40%">
+            </div>
+            <div class="slide">
+              <li>PythonのVisualization作成テンプレート【可視化】</li>
+              <img src="./images/python_visual.png" alt="Overview Image" class="slide-image" width="50%">
+            </div>
           </div>
-          <br>
-          <br>
-          <div class="slide">
-            <li>PythonのVisualization作成テンプレート【可視化】</li>
-            <img src="./images/python_visual.png" alt="Overview Image" class="slide-image" width="50%">
-          </div>
+          <!-- The buttons are now inside the image container -->
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
       </li>
       <li>
         <strong>情報収集＆スクレイピング:</strong> Worked closely with [team or department] on [specific project].
@@ -157,7 +170,7 @@
           <li>【進行中】モバイル空間データ</li>
         </ul>
       </li>
-      <li><strong>勉強会・スキル補助資料作成:</strong>資料作成URL一覧<a href="https://docs.google.com/spreadsheets/d/1eJcNMpGmPWGmlGvR_CJ8_1PxvGHcDdgSw4SjwqBrZyY/edit?gid=0#gid=0" target="_blank"></a></li> 
+      <li><strong>勉強会・スキル補助資料作成:</strong>資料作成URL一覧<a href="https://docs.google.com/spreadsheets/d/1eJcNMpGmPWGmlGvR_CJ8_1PxvGHcDdgSw4SjwqBrZyY/edit?gid=0#gid=0" target="_blank"></a></li>
       <li><strong>【対象外】LLMモデル導入:</strong>自動返信が可能な簡単なモジュールを作成した</li>
       <li><strong>【対象外】法人リスト作成:</strong>M&A提案基礎として日本４８０万社【廃業含む】のリストを作成した</li>
       <li><strong>【対象外】PDF自動エクセルか作成:</strong>無料ソフトでうまくエクセル化できない資料をエクセル化するモジュール作成</li>
@@ -223,6 +236,38 @@
         }
       });
     }
+  </script>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    function showSlide(index) {
+      if (index >= slides.length) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = slides.length - 1;
+      } else {
+        currentSlide = index;
+      }
+
+      slides.forEach((slide, i) => {
+        // Hide all slides except the current one
+        slide.style.display = i === currentSlide ? 'block' : 'none';
+      });
+    }
+
+    prevButton.addEventListener('click', () => {
+      showSlide(currentSlide - 1);
+    });
+
+    nextButton.addEventListener('click', () => {
+      showSlide(currentSlide + 1);
+    });
+
+    showSlide(currentSlide);
   </script>
 
   <footer>
