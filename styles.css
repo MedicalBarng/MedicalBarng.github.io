@@ -116,19 +116,19 @@ body {
     .foldable-content {
         display: none;
         padding: 10px;
-        background-color: #f1f1f1;
+        background-color: white;
     }
 
     /* Style the foldable header */
     .foldable-header {
         cursor: pointer;
         padding: 10px;
-        background-color: #ddd;
+        background-color: white;
         font-size: 18px;
         font-weight: bold;
     }
 
     /* Optional: Add hover effect for the header */
     .foldable-header:hover {
-        background-color: #ccc;
+        background-color: white;
     }
