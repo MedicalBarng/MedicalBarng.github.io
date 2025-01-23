@@ -5,113 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Contribution Report</title>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif, "Zen Kurenaido";
-      margin: 20px;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    header h1 {
-      font-size: 2em;
-      color: #333;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #666;
-    }
-    section {
-      margin-bottom: 20px;
-    }
-    section h2 {
-      color: #0056b3;
-      border-bottom: 2px solid #0056b3;
-      padding-bottom: 5px;
-    }
-    h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      color: #333;
-      font-size: 1.8em;
-    }
-
-    .slideshow-container {
-      position: relative;
-      overflow: hidden;
-      width: 50%;
-      display: flex;
-      align-items: center; /* Vertically centers the content */
-      justify-content: center; /* Centers everything horizontally */
-    }
-
-    .slides {
-      display: none;
-      transition: transform 0.5s ease;
-    }
-
-    .slide {
-      display: none;
-      margin-right: 20px;
-    }
-
-    .slide-image {
-      width: 50%; /* Ensure image spans the entire container */
-      display: block;
-    }
-
-    /* Caption text */
-    .caption {
-      color: #fff;
-      font-size: 18px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    /* Navigation buttons */
-    .prev, .next {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 100;
-    }
-
-
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
-
-    /* Style for the toggle button */
-    .toggle-button {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #0056b3;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
   <header>
@@ -121,155 +15,119 @@
   </header>
 
   <section>
-    <h2>
-      業績評価レポート<br>
-      期間：2024.10-2025.01
-    </h2>
-  </section>
-
-  <section>
-    <h2>まとめる目的</h2>
-    <p>7月からのこの部署での成果物・評価を自分でまとまて提出するため</p>
-    <p>チームに参加して以来、私はデータエンジニア・ジュニアデータサイエンティストとしてさまざまなタスクや取り組みを通じて、チームの目標達成を補助してきました。</p>
-    <p>この報告書では、私がこれまでに達成した業務と付加した価値について要約しています。</p>
-  </section>
-
-  <section>
-    <h2>内容まとめ</h2>
-    <ul>
-      <li><strong>CKレコメンデーション:</strong> RandomForestをベースとした過去カウンセリング結果を元とした</li>
-      <li><strong>Ckシフト:</strong> CK需要に合わせて１か月のシフトを自動算出する</li>
-      <li><strong>各種RPA:</strong> アナリストが必要なデータを自動連携するRPAを作成する</li>
-      <li>
-        <strong>テンプレート開発:</strong> pythonベースデータ自動算出スクリプトを作成した
-        <div class="slideshow-container">
-          <div class="slides">
-            <div class="slide">
-              <img src="./images/button_click.png" alt="Overview Image" class="slide-image" width="40%">
-            </div>
-            <div class="slide">
-              <li>GIT repository基本:プロダクトやコード共有の基本テンプレートを作成した</li>
-              <img src="./images/git_template.png" alt="Overview Image" class="slide-image" width="40%">
-            </div>
-            <div class="slide">
-              <li>PythonのVisualization作成テンプレート【可視化】</li>
-              <img src="./images/python_visual.png" alt="Overview Image" class="slide-image" width="50%">
-            </div>
-          </div>
-          <!-- The buttons are now inside the image container -->
-          <button class="prev">&#10094;</button>
-          <button class="next">&#10095;</button>
+    <h2 class="foldable-header">業績評価レポート<br>期間：2024.10-2025.01</h2>
+    <div class="foldable-content">
+      
+      <section>
+        <h2 class="foldable-header">まとめる目的</h2>
+        <div class="foldable-content">
+          <p>7月からのこの部署での成果物・評価を自分でまとまて提出するため</p>
+          <p>チームに参加して以来、私はデータエンジニア・ジュニアデータサイエンティストとしてさまざまなタスクや取り組みを通じて、チームの目標達成を補助してきました。</p>
+          <p>この報告書では、私がこれまでに達成した業務と付加した価値について要約しています。</p>
         </div>
-      </li>
-      <li>
-        <strong>情報収集＆スクレイピング:</strong> Worked closely with [team or department] on [specific project].
-        <ul>
-          <li>過去３年の天気データ</li>
-          <li>CK別所要データ</li>
-          <li>【進行中】衛星データ</li>
-          <li>【進行中】モバイル空間データ</li>
-        </ul>
-      </li>
-      <li><strong>勉強会・スキル補助資料作成:</strong>資料作成URL一覧<a href="https://docs.google.com/spreadsheets/d/1eJcNMpGmPWGmlGvR_CJ8_1PxvGHcDdgSw4SjwqBrZyY/edit?gid=0#gid=0" target="_blank"></a></li>
-      <li><strong>【対象外】LLMモデル導入:</strong>自動返信が可能な簡単なモジュールを作成した</li>
-      <li><strong>【対象外】法人リスト作成:</strong>M&A提案基礎として日本４８０万社【廃業含む】のリストを作成した</li>
-      <li><strong>【対象外】PDF自動エクセルか作成:</strong>無料ソフトでうまくエクセル化できない資料をエクセル化するモジュール作成</li>
-      <li><strong>【対象外】ConvanoRPA作成:</strong>PVを自動で取るモジュールを作成した</li>
-    </ul>
+      </section>
+      <section>
+        <h2 class="foldable-header">内容まとめ</h2>
+        <div class="foldable-content">
+          <ul>
+            <li><strong>CKレコメンデーション:</strong> RandomForestをベースとした過去カウンセリング結果を元とした</li>
+            <li><strong>Ckシフト:</strong> CK需要に合わせて１か月のシフトを自動算出する</li>
+            <li><strong>各種RPA:</strong> アナリストが必要なデータを自動連携するRPAを作成する</li>
+            <ul>
+              <li><strong>テンプレート開発:</strong> pythonベースデータ自動算出スクリプトを作成した</li>
+                  <li>GIT repository基本</li>
+                  <li>PythonのVisualization作成テンプレート【可視化】</li>
+            </ul>
+            <li>
+              <strong>情報収集＆スクレイピング:</strong> Worked closely with [team or department] on [specific project].
+              <ul>
+                <li>過去３年の天気データ</li>
+                <li>CK別所要データ</li>
+                <li>【進行中】衛星データ</li>
+                <li>【進行中】モバイル空間データ</li>
+              </ul>
+            </li>
+            <li><strong>勉強会・スキル補助資料作成:</strong>資料作成URL一覧<a href="https://docs.google.com/spreadsheets/d/1eJcNMpGmPWGmlGvR_CJ8_1PxvGHcDdgSw4SjwqBrZyY/edit?gid=0#gid=0" target="_blank"></a></li>
+            <li><strong>【対象外】LLMモデル導入:</strong>自動返信が可能な簡単なモジュールを作成した</li>
+            <li><strong>【対象外】法人リスト作成:</strong>M&A提案基礎として日本４８０万社【廃業含む】のリストを作成した</li>
+            <li><strong>【対象外】PDF自動エクセルか作成:</strong>無料ソフトでうまくエクセル化できない資料をエクセル化するモジュール作成</li>
+            <li><strong>【対象外】ConvanoRPA作成:</strong>PVを自動で取るモジュールを作成した</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="foldable-header">反省点</h2>
+        <div class="foldable-content">
+          <p>私は以下のような課題があると強く考えます。</p>
+          <ul>
+            <li><strong>勤怠:</strong> 月１以上遅刻、不安定なシフト</li>
+            <li><strong>要件定義不足:</strong> CK関連プロジェクトで要件をフォーマットを強く言えなかった。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="foldable-header">今後６か月計画</h2>
+        <div class="foldable-content">
+          <ul>
+            <li><strong>CKシフト自動化:</strong> 広告データをベースに日次・週次・月次CK配置・最適化プランを作成する</li>
+            <li><strong>インフラ基盤:</strong> AWSを中心としたインフラ作成</li>
+            <li><strong>広告最適化:</strong> CKシフトと連動した広告最適状況作成</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="foldable-header">６か月～２年長期計画</h2>
+        <div class="foldable-content">
+          <h2>６か月～２年長期計画</h2>
+          <p>会社の悩みとして、効率的な集客・超高単価客の海外流出・CK効率低下・IT＆AIツール不足だと仮定している</p>
+          <p>私は２年スパンで以下の課題に取り組みたいと考えます。</p>
+          <ul>
+              <li><strong>CK関連マルチモーダル:</strong>カウンセリング内容・カウンセリング後表情・カウンセリング履歴など音声・テキスト・視覚情報を含めた単価アップを成し遂げるためのAIツールを開発・提案したい</li>
+              <li><strong>広告ABテストツール開発:</strong>現状エクセル基盤のABテストを自動で集計するツールを提案したい</li>
+              <li><strong>費用配賦テーブル作成:</strong>クリニック・スタッフ事の費用を集計できるテーブルの開発を進めたい</li>
+              <li><strong>コミュニティ開発:</strong>Googleに頼らず、消費者が情報を得られるコミュニティを構築運営したい</li>
+              <li><strong>業務用LLM導入:</strong>
+                労務・勤怠・入退職・給与に関して自由に質問できる
+                簡単にいえば、社内ChatGPTを作りたい<br>
+                例：私は残業規定対象者なのか？
+              </li>
+              <li><strong>CK勉強会資料自動生成:</strong>自動動画生成</li>
+              <li><strong>競合他社比較ツール導入:</strong>地域・人口＋人流を含めたPLOT図</li>
+              <li><strong>海外事業:</strong>医者の無い医療コンサルティング会社を提案したい</li>
+        </div>
+      </section>
+    </div>
   </section>
 
   <section>
-    <h2>反省点</h2>
-    <p>私は以下のような課題があると強く考えます。</p>
-    <ul>
-      <li><strong>勤怠</strong>：月１以上遅刻、不安定なシフト、月１以上健康問題、喫煙による頻繁な席離れ</li>
-      <li><strong>要件定義不足</strong>：CK関連プロジェクトで要件をフォーマットを強く言えなかった。また、システムでできる事、できないことを明確に伝えることができなかった。</li>
-      <li><strong>システム安定性不足</strong>：現状コーディングの修繕性が非常に落ちている問題がある。UTILSやクラス【オブジェクト含み】導入を行うべき</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>今後６か月計画</h2>
-    <p>早く以下の課題を解決したいと考えます</p>
-    <ul>
-        <li><strong>CKシフト自動化:</strong> 広告データをベースに日次・週次・月次CK配置・最適化プランを作成する</li>
-        <li><strong>インフラ基盤:</strong> AWSを中心としたインフラ作成</li>
-        <li><strong>広告最適化:</strong> CKシフトと連動した広告最適状況作成</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>６か月～２年長期計画</h2>
-    <p>会社の悩みとして、効率的な集客・超高単価客の海外流出・CK効率低下・IT＆AIツール不足だと仮定している</p>
-    <p>私は２年スパンで以下の課題に取り組みたいと考えます。</p>
-    <ul>
-        <li><strong>CK関連マルチモーダル:</strong>カウンセリング内容・カウンセリング後表情・カウンセリング履歴など音声・テキスト・視覚情報を含めた単価アップを成し遂げるためのAIツールを開発・提案したい</li>
-        <li><strong>広告ABテストツール開発:</strong>現状エクセル基盤のABテストを自動で集計するツールを提案したい</li>
-        <li><strong>費用配賦テーブル作成:</strong>クリニック・スタッフ事の費用を集計できるテーブルの開発を進めたい</li>
-        <li><strong>コミュニティ開発:</strong>Googleに頼らず、消費者が情報を得られるコミュニティを構築運営したい</li>
-        <li><strong>業務用LLM導入:</strong>
-          労務・勤怠・入退職・給与に関して自由に質問できる
-          簡単にいえば、社内ChatGPTを作りたい<br>
-          例：私は残業規定対象者なのか？
-        </li>
-        <li><strong>CK勉強会資料自動生成:</strong>自動動画生成</li>
-        <li><strong>競合他社比較ツール導入:</strong>地域・人口＋人流を含めたPLOT図</li>
-        <li><strong>海外事業:</strong>医者の無い医療コンサルティング会社を提案したい</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>
+    <h2 class="foldable-header">
       業績評価レポート<br>
-      期間：2025.02-2025.08
+      期間：2025.02-2025.05
     </h2>
   </section>
 
+  <script src="script.js"></script>
   <script>
-    function toggleSections() {
-      var sections = document.querySelectorAll('.content');
-      sections.forEach(function(section) {
-        if (section.style.display === "none" || section.style.display === "") {
-          section.style.display = "block";
-        } else {
-          section.style.display = "none";
-        }
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get all foldable headers
+      const headers = document.querySelectorAll('.foldable-header');
+      
+      headers.forEach(header => {
+          header.addEventListener('click', function() {
+              const content = header.nextElementSibling; // The corresponding foldable content
+              // Toggle the display of the foldable content
+              if (content.style.display === "none" || content.style.display === "") {
+                  content.style.display = "block";
+              } else {
+                  content.style.display = "none";
+              }
+          });
       });
-    }
-  </script>
-
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    function showSlide(index) {
-      if (index >= slides.length) {
-        currentSlide = 0;
-      } else if (index < 0) {
-        currentSlide = slides.length - 1;
-      } else {
-        currentSlide = index;
-      }
-
-      slides.forEach((slide, i) => {
-        // Hide all slides except the current one
-        slide.style.display = i === currentSlide ? 'block' : 'none';
-      });
-    }
-
-    prevButton.addEventListener('click', () => {
-      showSlide(currentSlide - 1);
     });
-
-    nextButton.addEventListener('click', () => {
-      showSlide(currentSlide + 1);
-    });
-
-    showSlide(currentSlide);
   </script>
-
   <footer>
     <p>これからも宜しくお願いします</p>
   </footer>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foldable Sections</title>
+  <style>
+    .foldable-content {
+      display: none;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2 class="foldable-header">
+      業績評価レポート<br>
+      期間：2024.10-2025.01
+    </h2>
+    <div class="foldable-content">
+      <section>
+        <h2 class="foldable-header">
+          まとめる目的
+        </h2>
+        <div class="foldable-content">
+          <p>7月からのこの部署での成果物・評価を自分でまとまて提出するため</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="foldable-header">
+          内容まとめ
+        </h2>
+        <div class="foldable-content">
+          <ul>
+            <li><strong>CKレコメンデーション:</strong> RandomForestをベースとした過去カウンセリング結果を元とした</li>
+            <li><strong>Ckシフト:</strong> CK需要に合わせて１か月のシフトを自動算出する</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get all foldable headers
+      const headers = document.querySelectorAll('.foldable-header');
+      
+      headers.forEach(header => {
+          header.addEventListener('click', function() {
+              const content = header.nextElementSibling; // The corresponding foldable content
+              // Toggle the display of the foldable content
+              if (content.style.display === "none" || content.style.display === "") {
+                  content.style.display = "block";
+              } else {
+                  content.style.display = "none";
+              }
+          });
+      });
+    });
+  </script>
+</body>
+</html>
