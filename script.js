@@ -41,7 +41,7 @@ function initializePageFeatures() {
     });
 }
 
-
+// 折りたたみ可能状態
 document.addEventListener("DOMContentLoaded", function() {
   const headers = document.querySelectorAll('.foldable-header');
 
